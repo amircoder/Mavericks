@@ -47,7 +47,8 @@ buildscript {
             "rx2Savestate"           : "2.0.2",
             "rx2AandroidSchedulers"  : "2.0.0",
             "converterGson"          : "2.9.0",
-            "retrofit2Rxjava2Adapter": "1.0.0"
+            "retrofit2Rxjava2Adapter": "1.0.0",
+            "assistedInject"         : "0.4.0"
 
     ]
 
