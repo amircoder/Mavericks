@@ -8,16 +8,16 @@ interface BaseUseCase<PARAMS : Param, result> {
     fun execute(params: PARAMS, strategy: RepositoryStrategy): result
 }
 
-interface SingleUseCase<PARAMS : Param, RESULT> :
+interface BaseSingleUseCase<PARAMS : Param, RESULT> :
     BaseUseCase<PARAMS, Single<ResultResponse<RESULT>>>
 
 
-abstract class ObservableUseCase<PARAMS : Param, result>
+abstract class SingleUseCase<PARAMS : Param, result>
     (
     private val scheduler: SchedulerProvider,
     private val errorContainer: ErrorContainer
 ) :
-    SingleUseCase<PARAMS, result> {
+    BaseSingleUseCase<PARAMS, result> {
 
 
     protected abstract fun buildSingle(
