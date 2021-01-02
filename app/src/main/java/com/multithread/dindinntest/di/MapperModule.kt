@@ -7,16 +7,17 @@ import com.multithread.dindinntest.domain.entity.CategoryEntity
 import com.multithread.dindinntest.domain.entity.VenueEntity
 import com.multithread.dindinntest.mapper.CategoryMapper
 import com.multithread.dindinntest.mapper.VenueMapper
-import dagger.Binds
 import dagger.Module
+import dagger.Provides
 
 @Module
-interface MapperModule {
+class MapperModule {
 
-    @Binds
-    fun bindVenueMapper(mapper: VenueMapper): OneWayMapper<List<VenueDTO>, List<VenueEntity>>
+    @Provides
+    fun bindVenueMapper(): OneWayMapper<List<VenueDTO>, List<VenueEntity>> = VenueMapper()
 
-    @Binds
-    fun bindCategoryMapper(mapper: CategoryMapper): OneWayMapper<List<CategoryDTO>, List<CategoryEntity>>
+    @Provides
+    fun bindCategoryMapper(): OneWayMapper<List<CategoryDTO>, List<CategoryEntity>> =
+        CategoryMapper()
 
 }

@@ -5,7 +5,7 @@ import com.multithread.dindinntest.data.dto.VenueDTO
 import com.multithread.dindinntest.domain.entity.VenueEntity
 import javax.inject.Inject
 
-class VenueMapper @Inject() constructor(): OneWayMapper<List<VenueDTO>, List<VenueEntity>> {
+class VenueMapper @Inject constructor(): OneWayMapper<List<VenueDTO>, List<VenueEntity>> {
     override fun map(input: List<VenueDTO>): List<VenueEntity> =
         mutableListOf<VenueEntity>().apply {
             input.forEach {
