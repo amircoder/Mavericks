@@ -19,12 +19,22 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
+    flavorDimensions 'version'
+    productFlavors  {
+        functional {
+            buildConfigField("Boolean", "DEMO", "false")
+        }
+
+        demo {
+            buildConfigField("Boolean", "DEMO", "true")
+        }
+    }
+
     buildTypes {
         debug {
             minifyEnabled true
             buildConfigField("String", "BASE_URL", "\"http://some-mock-api.generator\"")
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-
         }
         release {
             minifyEnabled false
