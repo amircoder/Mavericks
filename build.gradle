@@ -49,7 +49,7 @@ buildscript {
             "converterGson"          : "2.9.0",
             "retrofit2Rxjava2Adapter": "1.0.0",
             "assistedInject"         : "0.4.0",
-            "mavericks"              : "2.0.0-beta3",
+            "mavericks"              : "1.5.1",
             "rxBinding"              : "2.1.1"
 
     ]

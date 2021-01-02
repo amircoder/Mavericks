@@ -1,5 +1,6 @@
 package com.multithread.dindinntest.data.remote
 
+import com.multithread.dindinntest.BuildConfig
 import com.multithread.dindinntest.base.BaseDataSource
 import com.multithread.dindinntest.base.OneWayMapper
 import com.multithread.dindinntest.base.ResultResponse

@@ -22,11 +22,11 @@ android {
     flavorDimensions 'version'
     productFlavors  {
         functional {
-            buildConfigField("Boolean", "DEMO", "false")
+            buildConfigField("boolean", "DEMO", "false")
         }
 
         demo {
-            buildConfigField("Boolean", "DEMO", "true")
+            buildConfigField("boolean", "DEMO", "true")
         }
     }
 
