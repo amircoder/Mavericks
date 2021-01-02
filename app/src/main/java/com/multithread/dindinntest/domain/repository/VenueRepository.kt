@@ -10,6 +10,6 @@ import javax.inject.Inject
 class VenueRepository @Inject constructor(
     private val venueRemoteDataSource: VenueRemoteDataSource
 ): SingleBaseRepository<List<VenueEntity>>(){
-    override fun getResult(): Single<ResultResponse<List<VenueEntity>>> =
+    override fun getResult(): Single<List<VenueEntity>> =
         venueRemoteDataSource.getVenueList()
 }

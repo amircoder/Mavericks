@@ -10,15 +10,15 @@ import io.reactivex.Single
 import javax.inject.Inject
 
 interface VenueRemoteDataSource : BaseDataSource {
-    fun getVenueList(): Single<ResultResponse<List<VenueEntity>>>
+    fun getVenueList(): Single<List<VenueEntity>>
 }
 
 class VenueRemoteDataSourceImpl @Inject constructor(
     private val api: ProductApi,
     private val mapper: OneWayMapper<List<VenueDTO>, List<VenueEntity>>
 ) : VenueRemoteDataSource {
-    override fun getVenueList(): Single<ResultResponse<List<VenueEntity>>> =
+    override fun getVenueList(): Single<List<VenueEntity>> =
         api.getVenueList().map {
-            ResultResponse.Success(mapper.map(it))
+            mapper.map(it)
         }
 }

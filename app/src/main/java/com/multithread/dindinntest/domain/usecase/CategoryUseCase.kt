@@ -15,6 +15,6 @@ class CategoryUseCase @Inject constructor(
     override fun buildSingle(
         params: AnyParam,
         strategy: RepositoryStrategy
-    ): Single<ResultResponse<List<CategoryEntity>>> = repository.getResult()
+    ): Single<List<CategoryEntity>> = repository.getResult()
 
 }

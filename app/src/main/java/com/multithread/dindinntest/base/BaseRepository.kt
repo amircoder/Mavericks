@@ -6,4 +6,4 @@ interface BaseRepository<T>{
     fun getResult(): T
 }
 
-abstract class SingleBaseRepository<T>: BaseRepository<Single<ResultResponse<T>>>
+abstract class SingleBaseRepository<T>: BaseRepository<Single<T>>

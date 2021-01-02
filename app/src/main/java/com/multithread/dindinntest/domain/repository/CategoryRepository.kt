@@ -10,7 +10,7 @@ import javax.inject.Inject
 class CategoryRepository @Inject constructor(
     private val categoryRemoteDataSource: CategoryRemoteDataSource
 ): SingleBaseRepository<List<CategoryEntity>>(){
-    override fun getResult(): Single<ResultResponse<List<CategoryEntity>>> =
+    override fun getResult(): Single<List<CategoryEntity>> =
     categoryRemoteDataSource.getCategories()
 
 }

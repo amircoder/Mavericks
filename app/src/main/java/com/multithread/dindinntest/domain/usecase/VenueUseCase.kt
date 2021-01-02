@@ -17,6 +17,6 @@ class VenueUseCase @Inject constructor(
     override fun buildSingle(
         params: AnyParam,
         strategy: RepositoryStrategy
-    ): Single<ResultResponse<List<VenueEntity>>> = repository.getResult()
+    ): Single<List<VenueEntity>> = repository.getResult()
 
 }

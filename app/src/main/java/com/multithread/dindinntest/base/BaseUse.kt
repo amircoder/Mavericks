@@ -23,19 +23,19 @@ abstract class SingleUseCase<PARAMS : Param, result>
     protected abstract fun buildSingle(
         params: PARAMS,
         strategy: RepositoryStrategy
-    ): Single<ResultResponse<result>>
+    ): Single<result>
 
 
     override fun execute(
         params: PARAMS,
         strategy: RepositoryStrategy
-    ): Single<ResultResponse<result>> =
+    ): Single<result> =
         buildSingle(params, strategy)
             .doOnError {
                 for (elem in it.stackTrace) {
                     Log.e(AppConstant.ERROR_TAG, elem.toString())
                 }
-            }.onErrorReturn { ResultResponse.Failure(errorContainer.getError(it)) }
+            }
             .subscribeOn(scheduler.ioScheduler)
             .observeOn(scheduler.mainScheduler)
 
