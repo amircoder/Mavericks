@@ -8,11 +8,12 @@ import android.view.ViewGroup
 import com.airbnb.mvrx.BaseMvRxFragment
 import com.airbnb.mvrx.fragmentViewModel
 import com.airbnb.mvrx.withState
+import com.multithread.dindinntest.base.BaseFragment
 import com.multithread.dindinntest.databinding.FragmentVenueBinding
 import dagger.android.support.AndroidSupportInjection
 import javax.inject.Inject
 
-class VenueFragment : BaseMvRxFragment() {
+class VenueFragment : BaseFragment() {
 
     @Inject
     lateinit var viewModelFactory: VenueViewModel.Factory
@@ -41,6 +42,7 @@ class VenueFragment : BaseMvRxFragment() {
     }
 
     override fun invalidate() = withState(viewModel) {
+        showLoading(it.categories.shouldLoad)
 
     }
 
