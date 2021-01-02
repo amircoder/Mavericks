@@ -53,7 +53,7 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 
     /** mavericks! */
-    implementation 'com.airbnb.android:mvrx:2.0.0-beta3'
+    implementation "com.airbnb.android:mvrx:${versions.mavericks}"
 
 
     /** Presentation */
@@ -66,6 +66,10 @@ dependencies {
     implementation "io.reactivex.rxjava2:rxjava:${versions.rxjava}"
     implementation "com.twistedequations.rx2:rx2-savestate:${versions.rx2Savestate}"
     implementation "com.twistedequations.rx2:rx2-android-schedulers:${versions.rx2AandroidSchedulers}"
+    implementation "com.jakewharton.rxbinding2:rxbinding-support-v4:${versions.rxBinding}"
+    implementation "com.jakewharton.rxbinding2:rxbinding-appcompat-v7:${versions.rxBinding}"
+    implementation "com.jakewharton.rxbinding2:rxbinding-appcompat-v7-kotlin:${versions.rxBinding}"
+    implementation "com.jakewharton.rxbinding2:rxbinding:${versions.rxBinding}"
     implementation "com.squareup.retrofit2:converter-gson:${versions.converterGson}"
     implementation "com.jakewharton.retrofit:retrofit2-rxjava2-adapter:${versions.retrofit2Rxjava2Adapter}"
 
@@ -84,6 +88,7 @@ dependencies {
     implementation "com.squareup.inject:assisted-inject-annotations-dagger2:${versions.assistedInject}"
     kapt "com.squareup.inject:assisted-inject-processor-dagger2:${versions.assistedInject}"
 
+
     /** Room */
     implementation "androidx.room:room-runtime:${versions.room}"
     kapt "androidx.room:room-compiler:${versions.room}"
@@ -96,6 +101,7 @@ dependencies {
     implementation "com.squareup.okhttp3:okhttp:${versions.okhttp}"
     implementation "com.squareup.okhttp3:logging-interceptor:${versions.okhttp}"
 
+
     /** Retrofit */
     implementation "com.squareup.retrofit2:retrofit:${versions.retrofit}"
     implementation "com.squareup.retrofit2:converter-moshi:${versions.retrofit}"
@@ -104,7 +110,7 @@ dependencies {
 
     /** gson */
     implementation "com.google.code.gson:gson:${versions.gson}"
-    implementation "com.squareup.retrofit2:converter-gson:${versions.converter_gson}"
+
 
     /** Image Loading */
     implementation "com.github.bumptech.glide:glide:${versions.glide}"
