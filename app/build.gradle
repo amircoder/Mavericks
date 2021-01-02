@@ -20,11 +20,19 @@ android {
     }
 
     buildTypes {
+        debug {
+            minifyEnabled true
+            buildConfigField("String", "BASE_URL", "http://some-mock-api.generator")
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+
+        }
         release {
             minifyEnabled false
+            buildConfigField("String", "BASE_URL", "http://some-mock-api.generator")
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8

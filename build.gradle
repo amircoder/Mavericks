@@ -53,8 +53,12 @@ buildscript {
     ]
 
     repositories {
+        maven { url "https://www.jitpack.io" }
+        maven { url 'https://maven.google.com' }
         google()
         jcenter()
+        maven { url "http://dl.bintray.com/twistedequations/maven" }
+        maven { url = 'https://repo.maven.apache.org/maven2'}
     }
     dependencies {
         classpath "com.android.tools.build:gradle:4.1.0"
