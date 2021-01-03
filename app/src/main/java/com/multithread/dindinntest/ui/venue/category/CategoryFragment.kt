@@ -13,6 +13,7 @@ import dagger.android.support.AndroidSupportInjection
 
 class CategoryFragment : Fragment() {
 
+    private var category: CategoryEntity = CategoryEntity()
     private var _binding: FragmentCategoryBinding? = null
     private val binding
         get() = _binding!!
@@ -31,11 +32,27 @@ class CategoryFragment : Fragment() {
         return binding.root
     }
 
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
+        getInfo()
+        setupRecycler()
+    }
+
+    private fun setupRecycler() {
+
+    }
+
+    private fun getInfo() {
+        arguments?.apply {
+            category = getParcelable<CategoryEntity>(CATEGORY_KEY) ?: CategoryEntity()
+        }
+    }
 
     companion object {
+        private const val CATEGORY_KEY = "CATEGORY_KEY"
         fun createsInstance(categoryEntity: CategoryEntity) = CategoryFragment().apply {
             arguments = Bundle().apply {
-
+                putParcelable(CATEGORY_KEY, categoryEntity)
             }
         }
     }
