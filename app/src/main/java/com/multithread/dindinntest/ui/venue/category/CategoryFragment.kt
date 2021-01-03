@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.multithread.dindinntest.databinding.FragmentCategoryBinding
+import com.multithread.dindinntest.domain.entity.CategoryEntity
 import dagger.android.support.AndroidSupportInjection
 
 
@@ -31,4 +32,11 @@ class CategoryFragment : Fragment() {
     }
 
 
+    companion object {
+        fun createsInstance(categoryEntity: CategoryEntity) = CategoryFragment().apply {
+            arguments = Bundle().apply {
+
+            }
+        }
+    }
 }
