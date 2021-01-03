@@ -45,6 +45,7 @@ class VenueFragment : BaseFragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         initViewPager()
+        viewModel.fetchCategories()
     }
 
     private fun initViewPager() {

@@ -5,7 +5,7 @@ import com.multithread.dindinntest.AppConstant
 import io.reactivex.Single
 
 interface BaseUseCase<PARAMS : Param, result> {
-    fun execute(params: PARAMS, strategy: RepositoryStrategy): result
+    fun invokeOperation(params: PARAMS, strategy: RepositoryStrategy): result
 }
 
 interface BaseSingleUseCase<PARAMS : Param, RESULT> :
@@ -26,7 +26,7 @@ abstract class SingleUseCase<PARAMS : Param, result>
     ): Single<result>
 
 
-    override fun execute(
+    override fun invokeOperation(
         params: PARAMS,
         strategy: RepositoryStrategy
     ): Single<result> =

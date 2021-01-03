@@ -24,7 +24,7 @@ class VenueViewModel @AssistedInject constructor(
 
     fun fetchCategories() {
         venueUseCase
-            .execute(AnyParam(), RepositoryStrategy.Remote)
+            .invokeOperation(AnyParam(), RepositoryStrategy.Remote)
             .execute {
                 copy(venues = it)
             }
