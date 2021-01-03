@@ -17,6 +17,7 @@ class VenueFragment : BaseFragment() {
 
     @Inject
     lateinit var viewModelFactory: VenueViewModel.Factory
+
     private val viewModel: VenueViewModel by fragmentViewModel()
 
     private var _binding: FragmentVenueBinding? = null

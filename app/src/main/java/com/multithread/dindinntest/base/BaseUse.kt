@@ -9,7 +9,7 @@ interface BaseUseCase<PARAMS : Param, result> {
 }
 
 interface BaseSingleUseCase<PARAMS : Param, RESULT> :
-    BaseUseCase<PARAMS, Single<ResultResponse<RESULT>>>
+    BaseUseCase<PARAMS, Single<RESULT>>
 
 
 abstract class SingleUseCase<PARAMS : Param, result>

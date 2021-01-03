@@ -19,12 +19,12 @@ typealias CategoryUseCaseAlias = SingleUseCase<AnyParam, List<CategoryEntity>>
 
 
 class VenueViewModel @AssistedInject constructor(
-    @Assisted venueState: VenueState,
-    private val categoryUseCase: SingleUseCase<AnyParam, List<CategoryEntity>>
-) : MvRxViewModel<VenueState>(venueState) {
+    @Assisted state: VenueState,
+    private val venueUseCase: VenueUseCaseAlias,
+) : MvRxViewModel<VenueState>(state) {
 
     fun fetchCategories() {
-        categoryUseCase
+        venueUseCase
             .execute(AnyParam(), RepositoryStrategy.Remote)
             .execute {
                 copy(categories = it)
