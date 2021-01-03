@@ -4,9 +4,11 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import androidx.viewpager.widget.PagerAdapter
 import com.multithread.dindinntest.R
 import com.multithread.dindinntest.util.ImageLoader
+import kotlinx.coroutines.runBlocking
 
 class MainViewPagerAdapter(private val context: Context,
                            private val imageLoader: ImageLoader) : PagerAdapter() {
@@ -19,13 +21,14 @@ class MainViewPagerAdapter(private val context: Context,
 
     override fun instantiateItem(container: ViewGroup, position: Int): Any {
         return LayoutInflater.from(context).run {
-            inflate(R.layout.item_main_viewpager_cover, container, false).apply {
-                container.addView(this)
-                imageLoader.loadImage(
-                    this.findViewById(R.id.item_view_pager_cover_image_view),0,0,
-                    itemList[position],
-
-                )
+            inflate(R.layout.item_main_viewpager_cover, container, false).also {view ->
+                container.addView(view)
+                runBlocking {
+                    imageLoader.loadImage(
+                        view.findViewById<ImageView>(R.id.item_view_pager_cover_image_view),0,0,
+                        itemList[position],
+                    )
+                }
             }
         }
     }

@@ -68,7 +68,10 @@ class VenueFragment : BaseFragment() {
                 onError(it.venues.error.localizedMessage ?: "")
             }
             is Success -> {
-                viewPagerAdapter.itemList = it.venues()!![0].coverImages
+                it.venues()!![0].let {venue ->
+                    binding.mainTitleTextView.text = venue.name
+                    viewPagerAdapter.itemList = venue.coverImages
+                }
             }
             is Loading -> {
                 // do nothing
