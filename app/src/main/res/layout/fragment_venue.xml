@@ -28,7 +28,7 @@
                 android:layout_height="match_parent">
 
                 <androidx.viewpager.widget.ViewPager
-                    android:id="@+id/main_view_pager"
+                    android:id="@+id/venue_view_pager"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -37,7 +37,7 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <com.google.android.material.tabs.TabLayout
-                    android:id="@+id/main_tab_layout"
+                    android:id="@+id/venue_tab_layout"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -50,7 +50,7 @@
 
                 <TextView
                     android:layout_marginTop="@dimen/margin_x_x_x_x_x_large"
-                    android:id="@+id/main_title_text_view"
+                    android:id="@+id/venue_title_text_view"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -59,9 +59,18 @@
                     android:layout_height="wrap_content"/>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
+
+
         </com.google.android.material.appbar.CollapsingToolbarLayout>
+
 
     </com.google.android.material.appbar.AppBarLayout>
 
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_gravity="center"
+        android:id="@+id/venue_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

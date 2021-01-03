@@ -25,6 +25,10 @@ class VenueFragment : BaseFragment() {
         MainViewPagerAdapter(requireContext(), imageLoader)
     }
 
+    private val venueCategoryListViewPager by {
+        VenueCategoryViewPagerAdapter()
+    }
+
     private var _binding: FragmentVenueBinding? = null
     private val binding get() = _binding!!
 
@@ -49,8 +53,8 @@ class VenueFragment : BaseFragment() {
     }
 
     private fun initViewPager() {
-        binding.mainTabLayout.setupWithViewPager(binding.mainViewPager, true)
-        binding.mainViewPager.adapter = viewPagerAdapter
+        binding.venueTabLayout.setupWithViewPager(binding.venueViewPager, true)
+        binding.venueViewPager.adapter = viewPagerAdapter
     }
 
     override fun onDestroy() {
@@ -69,7 +73,7 @@ class VenueFragment : BaseFragment() {
             }
             is Success -> {
                 it.venues()!![0].let {venue ->
-                    binding.mainTitleTextView.text = venue.name
+                    binding.venueTitleTextView.text = venue.name
                     viewPagerAdapter.itemList = venue.coverImages
                 }
             }
