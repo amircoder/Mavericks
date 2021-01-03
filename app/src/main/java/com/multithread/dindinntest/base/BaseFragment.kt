@@ -10,4 +10,8 @@ abstract class BaseFragment :
 
     }
 
+    fun onError(errorMessage: String){
+
+    }
+
 }

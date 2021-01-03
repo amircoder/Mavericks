@@ -7,5 +7,5 @@ import com.multithread.dindinntest.domain.entity.CategoryEntity
 import com.multithread.dindinntest.domain.entity.VenueEntity
 
 data class VenueState(
-    val categories: Async<List<VenueEntity>> = Uninitialized
+    val venues: Async<List<VenueEntity>> = Uninitialized
 ): MvRxState

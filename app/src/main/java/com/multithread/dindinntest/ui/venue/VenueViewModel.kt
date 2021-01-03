@@ -9,7 +9,6 @@ import com.multithread.dindinntest.base.RepositoryStrategy
 import com.multithread.dindinntest.base.SingleUseCase
 import com.multithread.dindinntest.domain.entity.CategoryEntity
 import com.multithread.dindinntest.domain.entity.VenueEntity
-import com.multithread.dindinntest.domain.usecase.categoryRepositoryAlis
 import com.squareup.inject.assisted.Assisted
 import com.squareup.inject.assisted.AssistedInject
 
@@ -27,7 +26,7 @@ class VenueViewModel @AssistedInject constructor(
         venueUseCase
             .execute(AnyParam(), RepositoryStrategy.Remote)
             .execute {
-                copy(categories = it)
+                copy(venues = it)
             }
     }
 
