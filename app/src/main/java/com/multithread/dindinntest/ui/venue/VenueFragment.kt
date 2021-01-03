@@ -25,17 +25,13 @@ class VenueFragment : BaseFragment() {
         MainViewPagerAdapter(requireContext(), imageLoader)
     }
 
-    private val venueCategoryListViewPager by {
-        VenueCategoryViewPagerAdapter()
+    private val venueCategoryListViewPager: VenueCategoryViewPagerAdapter by lazy {
+        VenueCategoryViewPagerAdapter(parentFragmentManager)
     }
 
     private var _binding: FragmentVenueBinding? = null
     private val binding get() = _binding!!
 
-    override fun onAttach(context: Context) {
-        AndroidSupportInjection.inject(this)
-        super.onAttach(context)
-    }
 
     override fun onCreateView(
         inflater: LayoutInflater,

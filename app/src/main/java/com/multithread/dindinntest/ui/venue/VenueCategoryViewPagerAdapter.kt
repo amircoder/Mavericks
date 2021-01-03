@@ -6,7 +6,7 @@ import androidx.fragment.app.FragmentPagerAdapter
 import com.multithread.dindinntest.domain.entity.CategoryEntity
 
 class VenueCategoryViewPagerAdapter(fragmentManager: FragmentManager) : FragmentPagerAdapter(
-    fragmentManager, FragmentPagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT) {
+    fragmentManager, BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT) {
 
     private var listItem: List<CategoryEntity> = emptyList()
 
