@@ -21,6 +21,11 @@ class MainViewPagerAdapter(private val context: Context,
         return LayoutInflater.from(context).run {
             inflate(R.layout.item_main_viewpager_cover, container, false).apply {
                 container.addView(this)
+                imageLoader.loadImage(
+                    this.findViewById(R.id.item_view_pager_cover_image_view),0,0,
+                    itemList[position],
+
+                )
             }
         }
     }
