@@ -49,7 +49,7 @@ class VenueFragment : BaseFragment() {
     }
 
     private fun initViewPager() {
-        binding.mainTabLayout.setupWithViewPager(binding.mainViewPager)
+        binding.mainTabLayout.setupWithViewPager(binding.mainViewPager, true)
         binding.mainViewPager.adapter = viewPagerAdapter
     }
 
