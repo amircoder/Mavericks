@@ -6,15 +6,21 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.multithread.dindinntest.databinding.FragmentCategoryBinding
 import com.multithread.dindinntest.domain.entity.CategoryEntity
 import com.multithread.dindinntest.domain.entity.FoodEntity
+import com.multithread.dindinntest.util.ImageLoader
 import dagger.android.support.AndroidSupportInjection
+import javax.inject.Inject
+
 
 
 class CategoryFragment : Fragment() {
 
 
+    @Inject
+    lateinit var imageLoader: ImageLoader
     private var category: CategoryEntity = CategoryEntity()
 
     private var _binding: FragmentCategoryBinding? = null
@@ -33,9 +39,9 @@ class CategoryFragment : Fragment() {
     }
 
     override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
+            inflater: LayoutInflater,
+            container: ViewGroup?,
+            savedInstanceState: Bundle?
     ): View? {
         _binding = FragmentCategoryBinding.inflate(inflater, container, false)
         return binding.root
@@ -45,10 +51,15 @@ class CategoryFragment : Fragment() {
         super.onActivityCreated(savedInstanceState)
         getInfo()
         setupRecycler()
+        foodListAdapter.foodItems = category.products
     }
 
     private fun setupRecycler() {
-        foodListAdapter = FoodRecyclerViewAdapter(category.products, callback)
+        foodListAdapter = FoodRecyclerViewAdapter(imageLoader, callback)
+        binding.categoryList.apply {
+            adapter = foodListAdapter
+            isNestedScrollingEnabled = false
+        }
     }
 
     private fun getInfo() {
