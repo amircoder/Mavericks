@@ -10,8 +10,8 @@ import com.multithread.dindinntest.R
 import com.multithread.dindinntest.util.ImageLoader
 import kotlinx.coroutines.runBlocking
 
-class MainViewPagerAdapter(private val context: Context,
-                           private val imageLoader: ImageLoader) : PagerAdapter() {
+class MainCoverImageViewPagerAdapter(private val context: Context,
+                                     private val imageLoader: ImageLoader) : PagerAdapter() {
 
     var itemList: List<String> = emptyList()
         set(value) {

@@ -1,6 +1,5 @@
 package com.multithread.dindinntest.ui.venue
 
-import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -9,7 +8,6 @@ import com.airbnb.mvrx.*
 import com.multithread.dindinntest.base.BaseFragment
 import com.multithread.dindinntest.databinding.FragmentVenueBinding
 import com.multithread.dindinntest.util.ImageLoader
-import dagger.android.support.AndroidSupportInjection
 import javax.inject.Inject
 
 class VenueFragment : BaseFragment() {
@@ -22,7 +20,7 @@ class VenueFragment : BaseFragment() {
     private val viewModel: VenueViewModel by fragmentViewModel()
 
     private val viewPagerAdapter by lazy {
-        MainViewPagerAdapter(requireContext(), imageLoader)
+        MainCoverImageViewPagerAdapter(requireContext(), imageLoader)
     }
 
     private val venueCategoryListViewPager: VenueCategoryViewPagerAdapter by lazy {
@@ -44,13 +42,15 @@ class VenueFragment : BaseFragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        initViewPager()
+        initViewPagers()
         viewModel.fetchCategories()
     }
 
-    private fun initViewPager() {
+    private fun initViewPagers() {
         binding.venueTabLayout.setupWithViewPager(binding.venueViewPager, true)
         binding.venueViewPager.adapter = viewPagerAdapter
+        binding.venueCategoryTabLayout.setupWithViewPager(binding.venueCategoryViewPager)
+        binding.venueCategoryViewPager.adapter = venueCategoryListViewPager
     }
 
     override fun onDestroy() {
@@ -71,6 +71,7 @@ class VenueFragment : BaseFragment() {
                 it.venues()!![0].let {venue ->
                     binding.venueTitleTextView.text = venue.name
                     viewPagerAdapter.itemList = venue.coverImages
+                    venueCategoryListViewPager.itemList = venue.categories
                 }
             }
             is Loading -> {
