@@ -1,8 +1,6 @@
 package com.multithread.dindinntest.ui.venue.category
 
-import android.util.Log
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.multithread.dindinntest.R
@@ -52,7 +50,7 @@ class FoodItemRecyclerViewHolder(
     }
 
     override fun bind(food: FoodEntity) {
-        Log.d("testTag", "bind: name: ${food.title}")
+        binding.itemFoodAddButton.text = getString(R.string.price_format).format(food.price.total, food.price.unit)
         imageLoader.loadImage(
                 binding.itemFoodImageView, 0, 0,
                 food.imageUrl
