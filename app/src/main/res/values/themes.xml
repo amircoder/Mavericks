@@ -35,6 +35,12 @@
         <item name="android:textColor">@color/color_text_primary</item>
     </style>
 
+    <style name="tv_lite_header">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/color_lite_text_primary</item>
+    </style>
+
     <style name="tv_dark_description">
         <item name="android:textStyle">normal</item>
         <item name="android:textSize">14sp</item>
