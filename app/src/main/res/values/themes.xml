@@ -41,6 +41,7 @@
     </style>
 
     <style name="tv_dark_description">
+        <item name="android:textColor">@color/color_text_secondary</item>
         <item name="android:textStyle">normal</item>
         <item name="android:textSize">14sp</item>
     </style>

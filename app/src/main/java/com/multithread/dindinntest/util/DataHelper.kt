@@ -36,21 +36,23 @@ object DataHelper {
     }
 
     private fun createProductList(): List<FoodEntity> = mutableListOf<FoodEntity>().apply {
-        add(
-                FoodEntity(
-                        id =UUID.randomUUID().toString(),
-                        title = "chicken",
-                        price = PriceEntity(300.0),
-                        imageUrl = "https://homepages.cae.wisc.edu/~ece533/images/serrano.png"
-                )
-        )
-        add(
-                FoodEntity(
-                        id =UUID.randomUUID().toString(),
-                        title = "Cocoa",
-                        price = PriceEntity(200.0),
-                        imageUrl = "https://homepages.cae.wisc.edu/~ece533/images/serrano.png"
-                )
-        )
+        repeat(10) {
+            add(
+                    FoodEntity(
+                            id = UUID.randomUUID().toString(),
+                            title = "chicken",
+                            description = """Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+|sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+|Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
+|nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in 
+|reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+| Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+|  officia deserunt mollit anim id est laborum.""".trimMargin(),
+                            info = "200 gm, 40 cm",
+                            price = PriceEntity(300.0),
+                            imageUrl = "https://homepages.cae.wisc.edu/~ece533/images/serrano.png"
+                    )
+            )
+        }
     }
 }
