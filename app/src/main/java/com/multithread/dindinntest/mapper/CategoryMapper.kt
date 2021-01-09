@@ -11,35 +11,37 @@ import javax.inject.Inject
 
 class CategoryMapper @Inject constructor() : OneWayMapper<List<CategoryDTO>, List<CategoryEntity>> {
     override fun map(input: List<CategoryDTO>): List<CategoryEntity> =
-        mutableListOf<CategoryEntity>().apply {
-            input.forEach {
-                add(
-                    CategoryEntity(
-                        id = it.id,
-                        name = it.name,
-                        products = mapProduct(it.products)
+            mutableListOf<CategoryEntity>().apply {
+                input.forEach {
+                    add(
+                            CategoryEntity(
+                                    id = it.id,
+                                    name = it.name,
+                                    products = mapProduct(it.products)
+                            )
                     )
-                )
+                }
             }
-        }
 
     private fun mapProduct(products: List<FoodDTO>): List<FoodEntity> =
-        mutableListOf<FoodEntity>().apply {
-            products.forEach {
-                add(
-                    FoodEntity(
-                        id = it.id,
-                        title = it.title,
-                        price = createPrice(it.price),
-                        imageUrl = it.imageUrl
+            mutableListOf<FoodEntity>().apply {
+                products.forEach {
+                    add(
+                            FoodEntity(
+                                    id = it.id,
+                                    title = it.title,
+                                    description = it.description,
+                                    info = it.info,
+                                    price = createPrice(it.price),
+                                    imageUrl = it.imageUrl
+                            )
                     )
-                )
+                }
             }
-        }
 
     private fun createPrice(price: PriceDTO): PriceEntity = PriceEntity(
-        total = price.total,
-        unit = price.unit
+            total = price.total,
+            unit = price.unit
     )
 
 }
