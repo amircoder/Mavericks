@@ -2,6 +2,8 @@ package com.multithread.dindinntest.ui.venue.category
 
 import android.content.Context
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -10,6 +12,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.multithread.dindinntest.databinding.FragmentCategoryBinding
 import com.multithread.dindinntest.domain.entity.CategoryEntity
 import com.multithread.dindinntest.domain.entity.FoodEntity
+import com.multithread.dindinntest.ui.venue.VenueFragment
 import com.multithread.dindinntest.util.ImageLoader
 import dagger.android.support.AndroidSupportInjection
 import javax.inject.Inject
@@ -21,6 +24,7 @@ class CategoryFragment : Fragment() {
 
     @Inject
     lateinit var imageLoader: ImageLoader
+
     private var category: CategoryEntity = CategoryEntity()
 
     private var _binding: FragmentCategoryBinding? = null
@@ -55,7 +59,7 @@ class CategoryFragment : Fragment() {
     }
 
     private fun setupRecycler() {
-        foodListAdapter = FoodRecyclerViewAdapter(imageLoader, callback)
+        foodListAdapter = FoodRecyclerViewAdapter(imageLoader, callback, MemoryLeakProofHandler())
         binding.categoryList.apply {
             adapter = foodListAdapter
             isNestedScrollingEnabled = false
@@ -75,5 +79,13 @@ class CategoryFragment : Fragment() {
                 putParcelable(CATEGORY_KEY, categoryEntity)
             }
         }
+    }
+
+
+    /**
+     * Prevents memory leaks via [Handler] objects.
+     */
+    class MemoryLeakProofHandler: Handler(Looper.getMainLooper()) {
+
     }
 }

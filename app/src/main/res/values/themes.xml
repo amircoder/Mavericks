@@ -25,7 +25,6 @@
 
 
     <style name="button_dark">
-        <item name="android:background">@drawable/background_button</item>
         <item name="android:textColor">@color/white</item>
     </style>
 

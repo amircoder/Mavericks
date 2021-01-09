@@ -8,10 +8,12 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
-    <color name="color_primary">#FF6200EE</color>
-    <color name="color_secondary">#FFBB86FC</color>
-    <color name="color_accent">#4CAF50</color>
+    <color name="color_primary">#6200EA</color>
+    <color name="color_secondary">#AA00FF</color>
+    <color name="color_accent">#64DD17</color>
     <color name="color_text_primary">#313032</color>
     <color name="color_lite_text_primary">#FFFFFF</color>
+
+    <color name="color_success">#00C853</color>
 
 </resources>
