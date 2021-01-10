@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.airbnb.mvrx.*
+import com.google.android.material.appbar.AppBarLayout
 import com.multithread.dindinntest.base.BaseFragment
 import com.multithread.dindinntest.databinding.FragmentVenueBinding
 import com.multithread.dindinntest.util.ImageLoader
@@ -47,6 +48,7 @@ class VenueFragment : BaseFragment() {
         initViewPagers()
         viewModel.fetchCategories()
     }
+
 
     private fun initViewPagers() {
         binding.venueTabLayout.setupWithViewPager(binding.venueViewPager, true)

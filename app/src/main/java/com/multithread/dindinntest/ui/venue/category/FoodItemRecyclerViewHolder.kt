@@ -38,7 +38,7 @@ class FoodItemRecyclerViewHolder(
 
     private fun initListeners(food: FoodEntity) {
         binding.itemFoodAddButton.setOnClickListener {
-            changeToUIAddStated()
+            changeToUIAddState()
             prepareSetBackToNormalUIState(food)
             callback(food)
         }
@@ -70,7 +70,7 @@ class FoodItemRecyclerViewHolder(
 
     }
 
-    private fun changeToUIAddStated() {
+    private fun changeToUIAddState() {
         binding.itemFoodAddButton.setBackgroundResource(R.drawable.background_button_touch)
         binding.itemFoodAddButton.setText(R.string.added_plus_one)
     }

@@ -15,7 +15,7 @@ object DataHelper {
                     "https://homepages.cae.wisc.edu/~ece533/images/serrano.png"
             ),
             categories = createCategoryList(),
-            logoUrl = "https://homepages.cae.wisc.edu/~ece533/images/watch.png"
+            logoUrl  = "https://homepages.cae.wisc.edu/~ece533/images/watch.png"
     )
 
     private fun createCategoryList(): List<CategoryEntity> = mutableListOf<CategoryEntity>().apply {

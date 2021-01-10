@@ -8,11 +8,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.recyclerview.widget.LinearLayoutManager
 import com.multithread.dindinntest.databinding.FragmentCategoryBinding
 import com.multithread.dindinntest.domain.entity.CategoryEntity
 import com.multithread.dindinntest.domain.entity.FoodEntity
-import com.multithread.dindinntest.ui.venue.VenueFragment
 import com.multithread.dindinntest.util.ImageLoader
 import dagger.android.support.AndroidSupportInjection
 import javax.inject.Inject
@@ -33,7 +31,7 @@ class CategoryFragment : Fragment() {
 
     private lateinit var foodListAdapter: FoodRecyclerViewAdapter
 
-    val callback: (FoodEntity) -> Unit = {
+    private val callback: (FoodEntity) -> Unit = {
 
     }
 
@@ -62,7 +60,7 @@ class CategoryFragment : Fragment() {
         foodListAdapter = FoodRecyclerViewAdapter(imageLoader, callback, MemoryLeakProofHandler())
         binding.categoryList.apply {
             adapter = foodListAdapter
-            isNestedScrollingEnabled = false
+            isNestedScrollingEnabled = true
         }
     }
 
