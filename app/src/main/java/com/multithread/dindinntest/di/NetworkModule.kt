@@ -25,24 +25,30 @@ class NetworkModule {
     @Singleton
     @Provides
     fun provideHttpClient(context: Context): OkHttpClient =
-        OkHttpClient.Builder()
-            .addInterceptor(NetworkInterceptor())
-            .cache(null)
-            .readTimeout(4, TimeUnit.SECONDS)
-            .addInterceptor(HttpLoggingInterceptor().apply {
-                level = HttpLoggingInterceptor.Level.BODY
-            }).build()
+            OkHttpClient.Builder()
+                    .addInterceptor(NetworkInterceptor())
+                    .cache(null)
+                    .writeTimeout(8, TimeUnit.SECONDS)
+                    .callTimeout(8, TimeUnit.SECONDS)
+                    .connectTimeout(8, TimeUnit.SECONDS)
+                    .readTimeout(8, TimeUnit.SECONDS)
+                    .addInterceptor(HttpLoggingInterceptor().apply {
+                        if (BuildConfig.DEBUG)
+                            level = HttpLoggingInterceptor.Level.BODY
+                        else
+                            level = HttpLoggingInterceptor.Level.NONE
+                    }).build()
 
     @Provides
     @Singleton
     fun provideRetrofit(
-        @NonNull client: OkHttpClient
+            @NonNull client: OkHttpClient
     ): Retrofit = Retrofit.Builder()
-        .client(client)
-        .baseUrl(BuildConfig.BASE_URL)
-        .addConverterFactory(GsonConverterFactory.create())
-        .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
-        .build()
+            .client(client)
+            .baseUrl(BuildConfig.BASE_URL)
+            .addConverterFactory(GsonConverterFactory.create())
+            .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
+            .build()
 
     @Provides
     fun provideErrorHandler(errorHandler: GeneralHandlerImpl): ErrorContainer = errorHandler
