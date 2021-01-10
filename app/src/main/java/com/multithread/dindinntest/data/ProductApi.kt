@@ -5,7 +5,7 @@ import io.reactivex.Single
 import retrofit2.http.GET
 
 interface ProductApi{
-    @GET("/venue")
+    @GET("NJ8AyaQAt")
     fun getVenueList(): Single<List<VenueDTO>>
 }
 

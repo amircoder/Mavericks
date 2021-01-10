@@ -33,10 +33,10 @@ class NetworkModule {
                     .connectTimeout(8, TimeUnit.SECONDS)
                     .readTimeout(8, TimeUnit.SECONDS)
                     .addInterceptor(HttpLoggingInterceptor().apply {
-                        if (BuildConfig.DEBUG)
-                            level = HttpLoggingInterceptor.Level.BODY
+                        level = if (BuildConfig.DEBUG)
+                            HttpLoggingInterceptor.Level.BODY
                         else
-                            level = HttpLoggingInterceptor.Level.NONE
+                            HttpLoggingInterceptor.Level.NONE
                     }).build()
 
     @Provides

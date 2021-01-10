@@ -33,12 +33,12 @@ android {
     buildTypes {
         debug {
             minifyEnabled true
-            buildConfigField("String", "BASE_URL", "\"http://some-mock-api.generator\"")
+            buildConfigField("String", "BASE_URL", "\"https://next.json-generator.com/api/json/get/\"")
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
         release {
             minifyEnabled false
-            buildConfigField("String", "BASE_URL", "\"http://some-mock-api.generator\"")
+            buildConfigField("String", "BASE_URL", "\"https://next.json-generator.com/api/json/get/\"")
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
@@ -80,8 +80,8 @@ dependencies {
     /** Rx */
     implementation "io.reactivex.rxjava2:rxandroid:${versions.rxandroid}"
     implementation "io.reactivex.rxjava2:rxjava:${versions.rxjava}"
-//    implementation "com.twistedequations.rx2:rx2-savestate:${versions.rx2Savestate}"
-//    implementation "com.twistedequations.rx2:rx2-android-schedulers:${versions.rx2AandroidSchedulers}"
+    implementation "com.twistedequations.rx2:rx2-savestate:${versions.rx2Savestate}"
+    implementation "com.twistedequations.rx2:rx2-android-schedulers:${versions.rx2AandroidSchedulers}"
 //    implementation "com.jakewharton.rxbinding2:rxbinding-support-v4:${versions.rxBinding}"
 //    implementation "com.jakewharton.rxbinding2:rxbinding-appcompat-v7:${versions.rxBinding}"
 //    implementation "com.jakewharton.rxbinding2:rxbinding-appcompat-v7-kotlin:${versions.rxBinding}"

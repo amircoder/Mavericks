@@ -3,6 +3,8 @@ package com.multithread.dindinntest.base
 import android.util.Log
 import com.multithread.dindinntest.AppConstant
 import io.reactivex.Single
+import io.reactivex.android.schedulers.AndroidSchedulers
+import io.reactivex.schedulers.Schedulers
 
 interface BaseUseCase<PARAMS : Param, result> {
     fun invokeOperation(params: PARAMS, strategy: RepositoryStrategy): result

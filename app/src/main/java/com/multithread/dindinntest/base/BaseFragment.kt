@@ -13,11 +13,11 @@ abstract class BaseFragment :
         super.onAttach(context)
     }
 
-    fun showLoading(loading: Boolean){
+    open fun showLoading(loading: Boolean){
 
     }
 
-    fun onError(errorMessage: String){
+    open fun onError(errorMessage: String){
 
     }
 
