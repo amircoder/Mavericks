@@ -24,7 +24,7 @@ class NetworkModule {
 
     @Singleton
     @Provides
-    fun provideHttpClient(context: Context): OkHttpClient =
+    fun provideHttpClient(): OkHttpClient =
             OkHttpClient.Builder()
                     .addInterceptor(NetworkInterceptor())
                     .cache(null)
@@ -36,7 +36,7 @@ class NetworkModule {
                         level = if (BuildConfig.DEBUG)
                             HttpLoggingInterceptor.Level.BODY
                         else
-                            HttpLoggingInterceptor.Level.NONE
+                            HttpLoggingInterceptor.Level.HEADERS
                     }).build()
 
     @Provides
@@ -57,5 +57,5 @@ class NetworkModule {
     fun provideImageLoader(imageLoader: ImageLoaderImpl): ImageLoader = imageLoader
 
     @Provides
-    fun provideApi(@NonNull retrofit: Retrofit) = retrofit.create(ProductApi::class.java)
+    fun provideApi(@NonNull retrofit: Retrofit): ProductApi = retrofit.create(ProductApi::class.java)
 }

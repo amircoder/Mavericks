@@ -8,6 +8,7 @@ import com.twistedequations.rx2.AndroidRxSchedulers
 import com.twistedequations.rx2.DefaultAndroidRxSchedulers
 import dagger.Module
 import dagger.Provides
+import javax.inject.Singleton
 
 @Module
 class AndroidModule {
@@ -15,10 +16,13 @@ class AndroidModule {
     @Provides
     fun provideContext(application: Application): Context = application.applicationContext
 
+    @Singleton
     @Provides
     fun rxSchedulers() : AndroidRxSchedulers = DefaultAndroidRxSchedulers()
 
 
+    @Singleton
     @Provides
-    fun providesAppScheduler(rxSchedulers: AndroidRxSchedulers): SchedulerProvider = AppSchedulerProvider(rxSchedulers)
+    fun provideAppScheduler(rxSchedulers: AndroidRxSchedulers): SchedulerProvider =
+        AppSchedulerProvider(rxSchedulers)
 }

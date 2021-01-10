@@ -1,14 +1,13 @@
 package com.multithread.dindinntest.ui.venue
 
-import android.app.Dialog
+
 import android.os.Bundle
-import android.os.Handler
-import android.os.Looper
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import com.airbnb.mvrx.*
-import com.google.android.material.appbar.AppBarLayout
 import com.multithread.dindinntest.base.BaseFragment
 import com.multithread.dindinntest.databinding.FragmentVenueBinding
 import com.multithread.dindinntest.ui.custom.LoaderDialog
@@ -90,11 +89,16 @@ class VenueFragment : BaseFragment() {
     }
 
     override fun showLoading(loading: Boolean) {
-        getLoaderDialog().show()
+        if (loading){
+            getLoaderDialog().show()
+        }else {
+            getLoaderDialog().dismiss()
+        }
     }
 
     override fun onError(errorMessage: String) {
         getLoaderDialog().dismiss()
+        Toast.makeText(requireContext(), errorMessage, Toast.LENGTH_LONG).show()
     }
 
     private fun getLoaderDialog(): LoaderDialog {

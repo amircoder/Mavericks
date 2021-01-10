@@ -8,6 +8,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import com.multithread.dindinntest.data.dto.CategoryDTO
 import com.multithread.dindinntest.databinding.FragmentCategoryBinding
 import com.multithread.dindinntest.domain.entity.CategoryEntity
 import com.multithread.dindinntest.domain.entity.FoodEntity

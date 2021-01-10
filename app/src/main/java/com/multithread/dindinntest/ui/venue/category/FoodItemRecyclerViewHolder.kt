@@ -5,6 +5,8 @@ import android.view.ViewGroup
 import com.multithread.dindinntest.AppConstant
 import com.multithread.dindinntest.R
 import com.multithread.dindinntest.base.BaseViewHolder
+import com.multithread.dindinntest.data.dto.CategoryDTO
+import com.multithread.dindinntest.data.dto.ProductDTO
 import com.multithread.dindinntest.databinding.ItemFoodBinding
 import com.multithread.dindinntest.domain.entity.FoodEntity
 import com.multithread.dindinntest.util.ImageLoader
@@ -40,14 +42,14 @@ class FoodItemRecyclerViewHolder(
         binding.itemFoodAddButton.setOnClickListener {
             changeToUIAddState()
             prepareSetBackToNormalUIState(food)
-            callback(food)
+//            callback(food)
         }
     }
 
     private fun loadImage(food: FoodEntity) {
         imageLoader.loadImage(
                 binding.itemFoodImageView, 0, 0,
-                food.imageUrl
+                food.id
         )
     }
 

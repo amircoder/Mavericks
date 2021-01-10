@@ -1,6 +1,7 @@
 package com.multithread.dindinntest.di
 
 import com.multithread.dindinntest.base.*
+import com.multithread.dindinntest.data.dto.DeliveryDTO
 import com.multithread.dindinntest.domain.entity.VenueEntity
 import com.multithread.dindinntest.domain.usecase.VenueUseCase
 import dagger.Module
@@ -19,4 +20,6 @@ class UseCaseModule {
         schedulerProvider,
         errorContainer
     )
+
+
 }

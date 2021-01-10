@@ -2,6 +2,8 @@ package com.multithread.dindinntest.ui.venue.category
 
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.multithread.dindinntest.data.dto.ProductDTO
+import com.multithread.dindinntest.domain.entity.CategoryEntity
 import com.multithread.dindinntest.domain.entity.FoodEntity
 import com.multithread.dindinntest.util.ImageLoader
 
