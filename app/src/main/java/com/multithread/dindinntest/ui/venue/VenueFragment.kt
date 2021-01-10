@@ -1,5 +1,6 @@
 package com.multithread.dindinntest.ui.venue
 
+import android.app.Dialog
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
@@ -10,13 +11,17 @@ import com.airbnb.mvrx.*
 import com.google.android.material.appbar.AppBarLayout
 import com.multithread.dindinntest.base.BaseFragment
 import com.multithread.dindinntest.databinding.FragmentVenueBinding
+import com.multithread.dindinntest.ui.custom.LoaderDialog
 import com.multithread.dindinntest.util.ImageLoader
 import javax.inject.Inject
 
 class VenueFragment : BaseFragment() {
 
+    private var loaderDialog: LoaderDialog? = null
+
     @Inject
     lateinit var imageLoader: ImageLoader
+
     @Inject
     lateinit var viewModelFactory: VenueViewModel.Factory
 
@@ -72,7 +77,7 @@ class VenueFragment : BaseFragment() {
                 onError(it.venues.error.localizedMessage ?: "")
             }
             is Success -> {
-                it.venues()!![0].let {venue ->
+                it.venues()!![0].let { venue ->
                     binding.venueTitleTextView.text = venue.name
                     viewPagerAdapter.itemList = venue.coverImages
                     venueCategoryListViewPager.itemList = venue.categories
@@ -83,4 +88,19 @@ class VenueFragment : BaseFragment() {
             }
         }
     }
+
+    override fun showLoading(loading: Boolean) {
+        getLoaderDialog().show()
+    }
+
+    override fun onError(errorMessage: String) {
+        getLoaderDialog().dismiss()
+    }
+
+    private fun getLoaderDialog(): LoaderDialog {
+        if (loaderDialog == null)
+            loaderDialog = LoaderDialog.newInstance(requireContext())
+        return loaderDialog!!
+    }
+
 }
