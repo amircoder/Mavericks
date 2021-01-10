@@ -1,0 +1,184 @@
+[
+  {
+    "id": "5ffadfd6800500926b399185",
+    "name": {
+      "first": "Dillon",
+      "last": "Wilcox"
+    },
+    "coverImages": [
+      "https://homepages.cae.wisc.edu/~ece533/images/frymire.png",
+      "https://homepages.cae.wisc.edu/~ece533/images/frymire.png",
+      "https://homepages.cae.wisc.edu/~ece533/images/fruits.png"
+    ],
+    "categories": [
+      {
+        "id": "5ffadfd62e02e2e3d7352314",
+        "name": "Chicken",
+        "products": [
+          {
+            "id": "5ffadfd627cbee9015581094",
+            "title": "Pasta",
+            "description": "Quis officia deserunt sit excepteur cillum ea laboris voluptate. Aliquip et velit non voluptate nostrud labore id nostrud. Reprehenderit ut reprehenderit officia deserunt consectetur velit consectetur aute reprehenderit adipisicing id sit culpa.",
+            "info": "202 gm, 34cm",
+            "price": {
+              "total": 20,
+              "unit": "usd"
+            },
+            "imageUrl": "https://www.tambypartyfoods.com.au/assets/Uploads/_resampled/ResizedImageWzQxNiwyNzVd/sample-our-food2.jpg"
+          },
+          {
+            "id": "5ffadfd6e4a2529f5866f311",
+            "title": "Sandwich",
+            "description": "Veniam ex est enim nulla veniam duis tempor esse quis reprehenderit in nulla reprehenderit in. Eu nisi id veniam officia nostrud id nulla ut deserunt irure exercitation nisi dolor consequat. Sint Lorem officia dolore culpa aliqua id ad ut aliqua tempor. Dolore ex et in aliqua incididunt exercitation magna. Tempor anim voluptate duis ullamco ex sint ex est veniam nisi est ullamco ipsum. Ipsum adipisicing excepteur ipsum duis mollit incididunt et.",
+            "info": "120 gm, 30cm",
+            "price": {
+              "total": 8,
+              "unit": "usd"
+            },
+            "imageUrl": "https://425magazine.com/wp-content/uploads/2019/03/Ku-Ku-Fries-1024x683.jpg"
+          },
+          {
+            "id": "5ffadfd69e2b9366524795af",
+            "title": "Pizza",
+            "description": "Anim minim tempor culpa laborum anim Lorem non aliqua est ipsum magna consectetur magna. Nisi reprehenderit commodo non culpa ipsum non aliqua voluptate deserunt culpa in esse qui. Consequat et velit minim aute do. Ut cupidatat do do minim officia enim. Cupidatat id amet do adipisicing consectetur ea non ut reprehenderit ea. Nulla velit et do do cillum officia proident eu culpa dolore dolore et aute ullamco. Ut consequat ipsum non voluptate duis id.",
+            "info": "100 gm, 23cm",
+            "price": {
+              "total": 100,
+              "unit": "usd"
+            },
+            "imageUrl": "https://www.tambypartyfoods.com.au/assets/Uploads/_resampled/ResizedImageWzQxNiwyNzVd/sample-our-food2.jpg"
+          },
+          {
+            "id": "5ffadfd63829877ea038202b",
+            "title": "Pizza",
+            "description": "Dolore enim enim enim nulla adipisicing deserunt laborum nostrud voluptate proident nisi aliqua laborum. Ullamco dolor do id sit adipisicing consectetur ullamco ullamco nostrud ea occaecat enim nostrud. Dolor occaecat magna consequat velit eiusmod officia minim. Fugiat aliqua eiusmod tempor magna pariatur amet dolore duis. Adipisicing tempor ipsum ut non aliqua. Cupidatat commodo dolore incididunt aliqua aliquip sint cupidatat sunt ea velit ex. Commodo consectetur duis cupidatat ullamco labore dolor cillum aliqua deserunt labore magna.",
+            "info": "202 gm, 34cm",
+            "price": {
+              "total": 21,
+              "unit": "usd"
+            },
+            "imageUrl": "https://www.tambypartyfoods.com.au/assets/Uploads/_resampled/ResizedImageWzQxNiwyNzVd/sample-our-food2.jpg"
+          }
+        ]
+      },
+      {
+        "id": "5ffadfd6539614a8d384c45f",
+        "name": "Noodle",
+        "products": [
+          {
+            "id": "5ffadfd6302f47841677b8eb",
+            "title": "Kebab",
+            "description": "Eiusmod in aliqua consequat duis labore culpa pariatur nostrud duis nulla. Commodo ex ullamco esse elit veniam nostrud mollit elit aliquip dolore. Nisi mollit consectetur irure non aliqua ea cupidatat do pariatur. Culpa sit dolore eiusmod anim nostrud nisi.",
+            "info": "120 gm, 30cm",
+            "price": {
+              "total": 8,
+              "unit": "usd"
+            },
+            "imageUrl": "https://425magazine.com/wp-content/uploads/2019/03/Paseo_Corn-on-the-Cob-450x300.jpg"
+          },
+          {
+            "id": "5ffadfd6be76f5f809e29091",
+            "title": "Pasta",
+            "description": "Nostrud duis cillum duis ipsum consequat sint ipsum exercitation reprehenderit esse quis. Dolore sunt magna laboris velit nulla aliquip. Nisi ut in labore sunt in occaecat nisi. Incididunt elit sint exercitation esse adipisicing esse magna enim dolore. Exercitation aliqua irure do consequat elit minim esse ad duis velit commodo. Irure Lorem esse dolor adipisicing quis tempor in commodo nulla mollit consequat. Nisi ullamco aute irure deserunt sint.",
+            "info": "120 gm, 30cm",
+            "price": {
+              "total": 10,
+              "unit": "usd"
+            },
+            "imageUrl": "https://425magazine.com/wp-content/uploads/2019/03/Ku-Ku-Fries-1024x683.jpg"
+          },
+          {
+            "id": "5ffadfd693f351c347dcb6f5",
+            "title": "Drinks",
+            "description": "Non veniam ullamco anim dolore sunt cillum. Occaecat enim cillum consequat nulla enim duis ullamco enim do elit. Sunt velit sint nisi labore amet nisi irure culpa laboris culpa ea mollit ullamco. Et veniam aliquip cupidatat mollit veniam. Tempor voluptate eu exercitation aute amet officia qui veniam minim ea sunt nisi.",
+            "info": "120 gm, 30cm",
+            "price": {
+              "total": 50,
+              "unit": "usd"
+            },
+            "imageUrl": "https://425magazine.com/wp-content/uploads/2019/03/Ku-Ku-Fries-1024x683.jpg"
+          }
+        ]
+      },
+      {
+        "id": "5ffadfd6921f00ac8ecacd95",
+        "name": "Drinks",
+        "products": [
+          {
+            "id": "5ffadfd62643bb11c54648a6",
+            "title": "Drinks",
+            "description": "Labore do eiusmod consequat est aute duis duis anim consectetur cupidatat adipisicing duis quis. Velit do cupidatat est ex quis fugiat quis. Sit amet consectetur excepteur irure exercitation laborum deserunt nisi exercitation reprehenderit tempor est. Magna est do magna sit in aliquip. Commodo deserunt irure do sit sit magna incididunt ex duis anim. Nulla quis exercitation pariatur occaecat nisi ullamco est cillum et aute.",
+            "info": "202 gm, 34cm",
+            "price": {
+              "total": 50,
+              "unit": "usd"
+            },
+            "imageUrl": "https://www.tambypartyfoods.com.au/assets/Uploads/_resampled/ResizedImageWzQxNiwyNzVd/sample-our-food2.jpg"
+          },
+          {
+            "id": "5ffadfd606bc5ad5c3f40a65",
+            "title": "Drinks",
+            "description": "Duis duis veniam dolor aliqua labore irure incididunt ullamco reprehenderit anim fugiat. Deserunt incididunt consequat ullamco esse aute pariatur. Id id sunt ut quis.",
+            "info": "202 gm, 34cm",
+            "price": {
+              "total": 10,
+              "unit": "usd"
+            },
+            "imageUrl": "https://www.tambypartyfoods.com.au/assets/Uploads/_resampled/ResizedImageWzQxNiwyNzVd/sample-our-food2.jpg"
+          },
+          {
+            "id": "5ffadfd6a4e294fbda9c32f6",
+            "title": "Chicken",
+            "description": "Lorem pariatur dolor labore consectetur ut voluptate. Fugiat sint culpa consequat ad laboris nisi est excepteur mollit laboris nisi eu pariatur. Laboris incididunt voluptate magna sunt ut officia cupidatat officia voluptate nostrud id occaecat. Et consectetur veniam ea adipisicing enim mollit sunt eiusmod. Officia qui id in nulla laborum sunt fugiat amet.",
+            "info": "202 gm, 34cm",
+            "price": {
+              "total": 21,
+              "unit": "usd"
+            },
+            "imageUrl": "https://425magazine.com/wp-content/uploads/2019/03/Paseo_Corn-on-the-Cob-450x300.jpg"
+          }
+        ]
+      },
+      {
+        "id": "5ffadfd61b28b8dbe6cc433a",
+        "name": "Pizza",
+        "products": [
+          {
+            "id": "5ffadfd683a8e5d3641d6373",
+            "title": "Beacon",
+            "description": "Cillum sunt ut cupidatat labore laboris duis ut aliqua. Quis est consectetur aliqua nisi aute aliqua ut aute et aute reprehenderit exercitation quis laborum. Officia elit Lorem enim non quis nostrud ex fugiat. Magna adipisicing dolor irure ipsum sint.",
+            "info": "202 gm, 34cm",
+            "price": {
+              "total": 100,
+              "unit": "usd"
+            },
+            "imageUrl": "https://425magazine.com/wp-content/uploads/2019/03/Paseo_Corn-on-the-Cob-450x300.jpg"
+          },
+          {
+            "id": "5ffadfd64d371d1439d8d339",
+            "title": "Pizza",
+            "description": "Culpa est cillum enim in do minim labore labore Lorem. Aliquip esse mollit ullamco Lorem incididunt ex velit. Sit pariatur id ea mollit duis non dolore exercitation proident sint officia.",
+            "info": "100 gm, 23cm",
+            "price": {
+              "total": 100,
+              "unit": "usd"
+            },
+            "imageUrl": "https://www.tambypartyfoods.com.au/assets/Uploads/_resampled/ResizedImageWzQxNiwyNzVd/sample-our-food2.jpg"
+          },
+          {
+            "id": "5ffadfd66a4cac6452a7a898",
+            "title": "Kebab",
+            "description": "Excepteur amet duis irure id incididunt tempor aliquip dolor ut. Magna eu eiusmod do Lorem exercitation aliquip exercitation consequat aliqua. Do duis sit proident occaecat. Ut fugiat culpa in culpa do. Non Lorem amet reprehenderit deserunt nostrud commodo irure quis dolore sit officia voluptate. Consectetur officia cillum irure elit. Enim pariatur aliqua minim laborum occaecat.",
+            "info": "120 gm, 30cm",
+            "price": {
+              "total": 10,
+              "unit": "usd"
+            },
+            "imageUrl": "https://www.tambypartyfoods.com.au/assets/Uploads/_resampled/ResizedImageWzQxNiwyNzVd/sample-our-food2.jpg"
+          }
+        ]
+      }
+    ],
+    "logoUrl": "https://homepages.cae.wisc.edu/~ece533/images/watch.png"
+  }
+]

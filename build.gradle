@@ -42,18 +42,25 @@ buildscript {
             'room'                   : '2.2.6',
             'glide'                  : '4.11.0',
             'swipeRefresh'           : '1.1.0',
-            'rxandroid'              : "2.2.1",
+            'rxandroid'              : "2.1.1",
             'rxjava'                 : "2.2.20",
             "rx2Savestate"           : "2.0.2",
             "rx2AandroidSchedulers"  : "2.0.0",
             "converterGson"          : "2.9.0",
-            "retrofit2Rxjava2Adapter": "1.0.0"
+            "retrofit2Rxjava2Adapter": "1.0.0",
+            "assistedInject"         : "0.4.0",
+            "mavericks"              : "1.4.0",
+            "rxBinding"              : "2.1.1"
 
     ]
 
     repositories {
+        maven { url "https://www.jitpack.io" }
+        maven { url 'https://maven.google.com' }
         google()
         jcenter()
+        maven { url "http://dl.bintray.com/twistedequations/maven" }
+        maven { url = 'https://repo.maven.apache.org/maven2' }
     }
     dependencies {
         classpath "com.android.tools.build:gradle:4.1.0"
@@ -68,6 +75,10 @@ allprojects {
     repositories {
         google()
         jcenter()
+        maven { url "https://www.jitpack.io" }
+        maven { url 'https://maven.google.com' }
+        maven { url "http://dl.bintray.com/twistedequations/maven" }
+        maven { url = 'https://repo.maven.apache.org/maven2' }
     }
 }
 

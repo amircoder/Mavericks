@@ -1,0 +1,35 @@
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="submit_button_width">136dp</dimen>
+    <dimen name="dimen_main_viewpager_height">440dp</dimen>
+    <dimen name="image_item_height">240dp</dimen>
+    <dimen name="margin_small">8dp</dimen>
+    <dimen name="margin_x_small">6dp</dimen>
+    <dimen name="margin_x_x_small">4dp</dimen>
+    <dimen name="margin_x_x_x_small">2dp</dimen>
+    <dimen name="margin_x_x_x_x_small">1dp</dimen>
+
+    <dimen name="margin_intermediate">12dp</dimen>
+    <dimen name="margin_medium">16dp</dimen>
+    <dimen name="margin_large">20dp</dimen>
+    <dimen name="margin_x_large">24dp</dimen>
+    <dimen name="margin_x_x_large">28dp</dimen>
+    <dimen name="margin_x_x_x_large">32dp</dimen>
+    <dimen name="margin_x_x_x_x_large">36dp</dimen>
+    <dimen name="margin_x_x_x_x_x_large">38dp</dimen>
+    <dimen name="margin_gigantic">42dp</dimen>
+    <dimen name="margin_x_gigantic">46dp</dimen>
+    <dimen name="margin_x_x_gigantic">50dp</dimen>
+    <dimen name="margin_x_x_x_gigantic">54dp</dimen>
+    <dimen name="margin_x_x_x_x_gigantic">58dp</dimen>
+    <dimen name="margin_x_x_x_x_x_gigantic">60dp</dimen>
+    <dimen name="margin_x_x_x_x_x_x_gigantic">64dp</dimen>
+    <dimen name="margin_negative_gigantic">-42dp</dimen>
+    <dimen name="margin_negative_x_gigantic">-46dp</dimen>
+    <dimen name="margin_negative_x_x_gigantic">-50dp</dimen>
+    <dimen name="margin_negative_x_x_x_gigantic">-54dp</dimen>
+    <dimen name="margin_negative_x_x_x_x_gigantic">-58dp</dimen>
+    <dimen name="margin_negative_x_x_x_x_x_gigantic">-60dp</dimen>
+    <dimen name="margin_negative_x_x_x_x_x_x_gigantic">-64dp</dimen>
+
+</resources>
