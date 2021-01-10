@@ -1,19 +1,13 @@
 package com.multithread.dindinntest.ui.main
 
 import android.os.Bundle
-import android.view.Window
-import android.view.WindowManager
-import com.airbnb.mvrx.BaseMvRxActivity
+import androidx.appcompat.app.AppCompatActivity
 import com.multithread.dindinntest.databinding.ActivityMainBinding
 import com.multithread.dindinntest.extension.makeFullScreen
-import dagger.android.AndroidInjection
-import dagger.android.AndroidInjector
-import dagger.android.DispatchingAndroidInjector
-import dagger.android.HasAndroidInjector
-import dagger.android.support.DaggerAppCompatActivity
+import dagger.android.*
 import javax.inject.Inject
 
-class MainActivity : BaseMvRxActivity(), HasAndroidInjector {
+class MainActivity : AppCompatActivity(), HasAndroidInjector {
 
 
     @Inject

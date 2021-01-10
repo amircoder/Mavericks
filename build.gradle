@@ -49,7 +49,7 @@ buildscript {
             "converterGson"          : "2.9.0",
             "retrofit2Rxjava2Adapter": "1.0.0",
             "assistedInject"         : "0.4.0",
-            "mavericks"              : "1.0.2",
+            "mavericks"              : "1.4.0",
             "rxBinding"              : "2.1.1"
 
     ]
@@ -75,6 +75,10 @@ allprojects {
     repositories {
         google()
         jcenter()
+        maven { url "https://www.jitpack.io" }
+        maven { url 'https://maven.google.com' }
+        maven { url "http://dl.bintray.com/twistedequations/maven" }
+        maven { url = 'https://repo.maven.apache.org/maven2' }
     }
 }
 
